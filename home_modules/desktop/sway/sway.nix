@@ -11,8 +11,9 @@
 
       # Enable pointer
       home.pointerCursor.sway.enable = true;
-
+      xdg.configFile."sway/config".source = "./config"
+    
     };
 
-    xdg.configFile."sway/config".source = "./path/to/config"
+
 }
