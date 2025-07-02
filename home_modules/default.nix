@@ -1,6 +1,6 @@
 {pkgs, lib, ... }: {
 
-  import =  [
+  imports = [
     ./desktop/sway.nix
   ];
 

@@ -114,9 +114,10 @@
     users = {
       "jimmyff" = import ./home.nix;
     };
-    #sharedModules = [
-    #  inputs.self.outputs.homeManagerModules.default
-    #];
+    
+    sharedModules = [(
+      inputs.self.outputs.homeManagerModules.default
+    )];
 
   };
 

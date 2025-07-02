@@ -30,7 +30,7 @@
       };
     };
 
-    #homeManagerModules.default = ./homeManagerModules;
+    homeManagerModules.default = ./home_modules;
 
   };
 }
