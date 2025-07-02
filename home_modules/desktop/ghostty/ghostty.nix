@@ -11,6 +11,6 @@
 
         programs.ghostty = {
             enable = true;
-        }
-    }
+        };
+    };
 }
