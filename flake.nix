@@ -12,20 +12,25 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, ... } @inputs: {
   
     nixosConfigurations = {
 
       # Jimmy's Pixelbook
       nixelbook = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = { inherit inputs; };
         modules = [
+
+          # might not be needed
+          inputs.home-manager.nixosModules.home-manager
+
           ./hosts/nixelbook/configuration.nix
-          ./modules/nixos/greetd.nix
+          ./nixos_modules/default.nix
         ];
       };
-
     };
+
+    #homeManagerModules.default = ./homeManagerModules;
 
   };
 }

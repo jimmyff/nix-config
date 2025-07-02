@@ -105,14 +105,22 @@
     description = "Jimmy Forrester-Fellowes";
     extraGroups = [ "networkmanager" "wheel" ];
   };
+  
+  
+  
   home-manager = {
     # pass inputs to home-manager modules
     extraSpecialArgs = { inherit inputs; };
     users = {
       "jimmyff" = import ./home.nix;
     };
+    #sharedModules = [
+    #  inputs.self.outputs.homeManagerModules.default
+    #];
 
   };
+
+
   
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
