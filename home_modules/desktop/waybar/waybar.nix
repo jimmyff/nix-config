@@ -11,7 +11,7 @@
 
       
       xdg.configFile."waybar/config.jsonc".source = ./config.jsonc;
-      xdg.configFile."waybar/styles.css".source = ./styles.css;
+      xdg.configFile."waybar/style.css".source = ./style.css;
      
     };
 
