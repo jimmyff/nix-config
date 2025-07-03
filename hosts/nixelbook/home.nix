@@ -27,19 +27,20 @@
     pkgs.google-chrome		# browser
     pkgs.bitwarden-desktop		# vault
 
-    pkgs.fuzzel			    # launcher (niri)
-    pkgs.wofi           # launcher (sway)
-    pkgs.mako				    # notifications
-    pkgs.wl-clipboard   # clipboard
-    pkgs.nautilus			  # file manager
-    pkgs.font-awesome		# font
-    pkgs.waybar         # status
-    pkgs.slurp          # screenshots
-    pkgs.grim           # screenshots
+    pkgs.fuzzel			                  # launcher (niri)
+    pkgs.wofi                         # launcher (sway)
+    pkgs.mako				                  # notifications
+    pkgs.wl-clipboard                 # clipboard
+    pkgs.nautilus			                # file manager
+    pkgs.font-awesome		              # font icons
+    pkgs.nerd-fonts.jetbrains-mono    # font
+    pkgs.waybar                       # status
+    pkgs.slurp                        # screenshots
+    pkgs.grim                         # screenshots
 
-    pkgs.code-cursor		# ide
-    pkgs.ghostty        # term
-    pkgs.neofetch       # info
+    pkgs.code-cursor		              # ide
+    pkgs.ghostty                      # term
+    pkgs.neofetch                     # info
 
 
     pkgs.catppuccin-gtk # theme
