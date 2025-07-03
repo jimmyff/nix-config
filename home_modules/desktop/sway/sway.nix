@@ -11,8 +11,14 @@
 
       # Enable pointer
       home.pointerCursor.sway.enable = true;
-      # TODO: This shouldnt link here... ideally would be relative
       xdg.configFile."sway/config".source = ./config;
+
+      catppuccin.sway.enable = true;
+      #catppuccin.sway.flavor = "macchiato";
+
+      catppuccin.swaylock.enable = true;
+      #catppuccin.swaylock.flavor = "macchiato";
+
     };
 
 

@@ -1,6 +1,11 @@
 { inputs, config, pkgs, ... }:
 
 {
+
+  imports = [
+    inputs.catppuccin.homeModules.catppuccin
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jimmyff";
@@ -72,7 +77,7 @@
   programs.btop = {
     enable = true;
     settings = {
-      color_theme = "HotPurpleTrafficLight";
+      #color_theme = "HotPurpleTrafficLight";
       vim_keys = true;
     };
   };

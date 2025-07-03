@@ -24,6 +24,8 @@
           # might not be needed
           inputs.home-manager.nixosModules.home-manager
 
+          inputs.catppuccin.nixosModules.catppuccin
+
           ./hosts/nixelbook/configuration.nix
           ./nixos_modules/default.nix
         ];
