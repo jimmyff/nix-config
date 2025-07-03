@@ -10,7 +10,7 @@
     config = lib.mkIf config.catppuccin_module.enable {
 
       catppuccin.enable = true;
-      catppuccin.flavor = "macchiato";      
+      catppuccin.flavor = "mocha";      
      
     };
 
