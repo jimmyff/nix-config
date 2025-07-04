@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "height": 24,
-    "spacing": 5,
+    "spacing": 4,
 
     "modules-left": [
         "sway/workspaces", 
@@ -17,16 +17,16 @@
         "memory",
         "temperature",
         "backlight",
-        "battery", 
-        "sway/language", 
-        "idle_inhibitor", 
+        //"sway/language", 
+        //"idle_inhibitor", 
         "network", 
         "bluetooth", 
+        "battery", 
         "tray"
     ],
 
     //"hyprland/workspaces": {
-    //    "format": "<span size='larger'>{icon}</span>",
+    //    "format": "{icon}",
     //    "on-click": "activate",
     //    "format-icons": {
     //        "active": "\uf444",
@@ -44,13 +44,13 @@
     //},
 
     "sway/workspaces": {
-        "format": "<span size='larger'>{icon}</span>",
+        "format": "{icon}",
         "on-click": "activate",
         "format-icons": {
             "active": "\uf444",
             "default": "\uf4c3"
         },
-        "icon-size": 10,
+        "icon-size": 16,
         "sort-by-number": true,
         "persistent-workspaces": {
             "1": [],
@@ -62,10 +62,10 @@
     },
 
     "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        "format": "{}"
     },
     "sway/scratchpad": {
-        "format": "{icon} {count}",
+        "format": "{icon}  r{count}",
         "show-empty": false,
         "format-icons": ["", ""],
         "tooltip": true,
@@ -77,27 +77,42 @@
     },
 
     "wireplumber": {
-        "format": "\udb81\udd7e  {volume}%",
+        "format": "\udb81\udd7e {volume}%",
         "max-volume": 100,
         "scroll-step": 5
     },
 
     "battery": {
-        "bat": "BAT1",
+        "bat": "BAT0",
         "interval": 60,
         "format": "{icon}  {capacity}%",
         "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "icon-size" : 16,
+        "format": "  {usage}%",
+        "tooltip": false,
+        "states": {
+            "warning": 80,
+            "critical": 95
+        }
     },
     "memory": {
+        "icon-size" : 16,
         "interval": 30,
-        "format": "\uf4bc  {used:0.1f}G"
+        "format": "\uf4bc  {percentage}%",
+        "states": {
+            "warning": 60,
+            "critical": 85
+        }
     },
 
     "temperature": {
+        "icon-size" : 16,
         // "format-icons": ["", "", ""]
         "format": "{temperatureC}°C",
         "critical-threshold": 80
@@ -109,6 +124,7 @@
     //},
 
     "network": {
+        "icon-size" : 16,
         "format": "",
         "format-ethernet": "\udb83\udc9d",
         "format-wifi": "{icon}",
@@ -120,6 +136,7 @@
     },
 
     "bluetooth": {
+        "icon-size" : 16,
         "format": "\udb80\udcaf",
         "format-disabled": "\udb80\udcb2",
         "format-connected": "\udb80\udcb1",

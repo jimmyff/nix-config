@@ -9,10 +9,14 @@
 
     config = lib.mkIf config.waybar_module.enable {
 
-      
+      programs.waybar.enable = true;
+#      
       xdg.configFile."waybar/config.jsonc".source = ./config.jsonc;
-      xdg.configFile."waybar/style.css".source = ./style.css;
+      xdg.configFile."waybar/style.css".source = lib.mkForce ./style.css;
      
+
+      
+
     };
 
 

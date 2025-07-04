@@ -39,7 +39,6 @@
     pkgs.nautilus			                # file manager
     pkgs.font-awesome		              # font icons
     pkgs.nerd-fonts.jetbrains-mono    # font
-    pkgs.waybar                       # status
     pkgs.slurp                        # screenshots
     pkgs.grim                         # screenshots
 

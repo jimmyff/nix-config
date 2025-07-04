@@ -1,22 +1,36 @@
 @define-color foreground #eeeeee;
-@define-color foreground-inactive #aaaaaa;
+@define-color foreground-charging #26A65B;
+@define-color foreground-inactive #555555;
 @define-color background #000000;
+@define-color background-hover #111111;
+
 
 * {
-    font-family: JetBrainsMono Nerd Font;
+    font-family: JetBrainsPropo Nerd Font, Font Awesome;
     font-size: 16px;
+    font-weight: bold;
     padding: 0;
     margin: 0;
 }
 
-#waybar {
-    color: @foreground;
+window#waybar {
     background-color: @background;
+    color: @foreground;
+    padding: 0 16px;
+}
+
+
+
+label.module {
+    padding: 0 4px;
+}
+box.module button:hover {
+    background-color: @background-hover;
 }
 
 #workspaces button {
     color: @foreground;
-    padding-left: 0.7em;
+    padding: 0 8px;
 }
 
 #workspaces button.empty {
@@ -25,7 +39,7 @@
 
 #memory,
 #custom-platform-profile {
-    padding-left: 1em
+
 }
 
 #wireplumber,
@@ -35,5 +49,17 @@
 #network,
 #bluetooth,
 #tray {
-    padding-right: 1em 
+
+}
+
+.charging {
+    color: @foreground-charging;
+}
+
+.warning:not(.charging) {
+    color: #f56c6c;
+}
+
+.critical:not(.charging) {
+    color: #ff2222;
 }
