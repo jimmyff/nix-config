@@ -14,11 +14,16 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
+  boot.loader.systemd-boot.configurationLimit = 16;
 
   nix = {
     settings.auto-optimise-store = true;
     settings.experimental-features = "nix-command flakes";
+   	gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
   };
   
 
